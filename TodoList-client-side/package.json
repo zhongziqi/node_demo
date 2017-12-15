@@ -1,0 +1,16 @@
+{
+  "name": "FRONTEND",
+  "version": "1.0.0",
+  "description": "A SIMPLE FRONTEND AND BACKEND PROJECT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edison",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "vue": "^2.3.4"
+  }
+}
