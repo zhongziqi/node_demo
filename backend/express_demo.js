@@ -3,10 +3,10 @@ var app = express();
 var mysql = require('mysql');
 //根据本机实际情况填写
 var connection = mysql.createConnection({
-    host: 'input your host address',
-    user: 'input your username',
-    password: 'input your password',
-    database: 'input your database name'
+    host: '119.23.227.94',
+    user: 'root',
+    password: 'zzp2yzz',
+    database: 'test'
 });
 connection.connect();
 //设置跨域
@@ -35,8 +35,9 @@ app.get('/api/todoList', function (req, res) {
 })
 //新增
 app.get('/api/addTodo', function (req, res) {
-	
-    var addSql = 'INSERT INTO todoList(id,title) values(0,?)';
+	var ct = new Date();
+    var addSql = 'INSERT INTO todoList(id,title,'+ct+') values(0,?,?)';
+    console.log(ct,'ct');
     var addSqlParams = [req.query.title];
     connection.query(addSql, addSqlParams, function (err, result) {
         if (err) {

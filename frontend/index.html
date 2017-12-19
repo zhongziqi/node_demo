@@ -68,6 +68,7 @@
             $.get(serviceHost + '/api/todoList', function(data, status){
                 if(status == 'success'){
                     self.list = data;
+                    // console.log(data);
                 }else{
                     console.log('/api/todoList request error');
                 }
