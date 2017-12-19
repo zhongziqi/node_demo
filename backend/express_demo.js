@@ -3,10 +3,10 @@ var app = express();
 var mysql = require('mysql');
 //根据本机实际情况填写
 var connection = mysql.createConnection({
-    host: '119.23.227.94',
+    host: '',
     user: 'root',
-    password: 'zzp2yzz',
-    database: 'test'
+    password: '',
+    database: ''
 });
 connection.connect();
 //设置跨域
