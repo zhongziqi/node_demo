@@ -3,10 +3,10 @@ var app = express();
 var mysql = require('mysql');
 //根据本机实际情况填写
 var connection = mysql.createConnection({
-    host: '',
-    user: '',
-    password: '',
-    database: ''
+    host: 'www.yangzhizhao.com',
+    user: 'root',
+    password: 'zzp2yzz',
+    database: 'test'
 });
 connection.connect();
 //设置跨域
@@ -58,7 +58,7 @@ app.get('/api/delTodo', function (req, res) {
         getTodoList(res);
     });
 })
-var server = app.listen(8083, function () {
+var server = app.listen(443, function () {
     var host = server.address().address
     var port = server.address().port
     console.log("应用实例，访问地址为 http://%s:%s", host, port)
